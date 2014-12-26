@@ -1,33 +1,83 @@
 
+grisBase = #C0C0C0
+blueBase = #020086
+
 body
   background #008081
   height 100%
   margin 0
 
-
 #ui
   position relative
+  padding 20px 10px
 
 #desktop
   height 500px
-  position relative
+  position absolute
 
 #taskbar
-  background #C0C0C0
+  background grisBase
+  border-top 1px solid #FFFFFF
   height 25px
+  left 0
   position fixed
   bottom 0
   padding 7px 0
   width 100%
-  #start
-    border-top 1px solid #E6E6E6
-    border-left 1px solid #E6E6E6
-    border-bottom 1px solid #7E7E7E
-    border-right 1px solid #7E7E7E
-    box-shadow 1px 1px 0 0 #000000, -1px -1px 0 0 #FFFFFF
+  div
     display inline-block
+    label
+      vertical-align middle
+  #start
     height 25px
     margin-left 5px
     padding 0 5px
     label
-      vertical-align middle
+      &:before
+        content url(http://www.useragentstring.com/img/os/windows95.png)
+        margin-right 3px
+        vertical-align middle
+  #notifications
+    border-left 1px solid #7E7E7E
+    border-top 1px solid #7E7E7E
+    float right
+    min-width 100px
+    text-align center
+
+.btnDefault
+  border-top 1px solid #E6E6E6
+  border-left 1px solid #E6E6E6
+  border-bottom 1px solid #7E7E7E
+  border-right 1px solid #7E7E7E
+  box-shadow 1px 1px 0 0 #000000, -1px -1px 0 0 #FFFFFF
+
+.window
+  height 300px
+  margin auto
+  position relative
+  width 600px
+  .wtitle
+    background blueBase
+    padding 2px 0
+    .wttext
+      color #FFFFFF
+      display inline-block
+      font-weight bold
+      padding-left 2px
+      position relative
+      width 80%
+    .wtbutton
+      float right
+      padding-right 2px
+      position relative
+      width 10%
+      div
+        background grisBase
+        float right
+        height 18px
+        text-align center
+        vertical-align middle
+        width 30%
+        &:first-child
+          margin-left 5px
+
