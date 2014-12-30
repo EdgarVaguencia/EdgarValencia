@@ -14,6 +14,18 @@ body
 #desktop
   height 500px
   position absolute
+  width 100px
+  .icon
+    position relative
+    width 100px
+    height 85px
+    span
+      bottom 0
+      color #FFFFFF
+      font-size .9rem
+      position absolute
+      text-align center
+      width 100%
 
 #taskbar
   background grisBase
@@ -34,7 +46,7 @@ body
     padding 0 5px
     label
       &:before
-        content url(http://www.useragentstring.com/img/os/windows95.png)
+        content url("../img/windows95.png")
         margin-right 3px
         vertical-align middle
   #notifications
@@ -52,13 +64,14 @@ body
   box-shadow 1px 1px 0 0 #000000, -1px -1px 0 0 #FFFFFF
 
 .window
-  height 300px
+  background grisBase
+  height 500px
   margin auto
   position relative
-  width 600px
+  width 700px
   .wtitle
     background blueBase
-    padding 2px 0
+    padding 4px 0
     .wttext
       color #FFFFFF
       display inline-block
@@ -74,10 +87,11 @@ body
       div
         background grisBase
         float right
-        height 18px
+        height 17px
         text-align center
-        vertical-align middle
         width 30%
         &:first-child
           margin-left 5px
-
+        span
+          line-height 15px
+          vertical-align top
